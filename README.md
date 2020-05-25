@@ -24,3 +24,30 @@ func main() {
     // something.sayBye()   // 불가능
 }
 ```
+
+### 상수와 변수
+
+#### 상수
+```go
+func main() {
+    // const 변수명 타입 = 값
+    const name string = "bear"
+}
+```
+
+#### 변수
+```go
+func main() {
+    // var 변수명 타입 = 값
+    var name string = "bear"
+}
+```
+
+#### 변수 축약형
+func 안에서 사용 가능
+```go
+func main() {
+    // 변수명 := 값
+	name := "bear"
+}
+```
