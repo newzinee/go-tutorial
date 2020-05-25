@@ -27,7 +27,7 @@ func main() {
 
 ### 상수와 변수
 
-상수
+#### 상수
 ```go
 func main() {
     // const 변수명 타입 = 값
@@ -35,7 +35,7 @@ func main() {
 }
 ```
 
-변수
+#### 변수
 ```go
 func main() {
     // var 변수명 타입 = 값
@@ -43,11 +43,11 @@ func main() {
 }
 ```
 
-변수 축약형
+#### 변수 축약형
+func 안에서 사용 가능
 ```go
 func main() {
     // 변수명 := 값
 	name := "bear"
 }
 ```
-func 안에서 사용 가능
