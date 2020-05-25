@@ -1,7 +1,7 @@
 # go-tutorial
 https://academy.nomadcoders.co/ 노마드코더 go 시작하기
 
-### 실행
+실행
 
 > go run main.go
 
@@ -22,32 +22,5 @@ func main() {
 func main() {
     something.SayHello()    // 가능
     // something.sayBye()   // 불가능
-}
-```
-
-### 상수와 변수
-
-#### 상수
-```go
-func main() {
-    // const 변수명 타입 = 값
-    const name string = "bear"
-}
-```
-
-#### 변수
-```go
-func main() {
-    // var 변수명 타입 = 값
-    var name string = "bear"
-}
-```
-
-#### 변수 축약형
-func 안에서 사용 가능
-```go
-func main() {
-    // 변수명 := 값
-	name := "bear"
 }
 ```
