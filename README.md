@@ -1,7 +1,9 @@
 # go-tutorial
 https://academy.nomadcoders.co/ 노마드코더 go 시작하기
 
-실행
+https://golang.org
+
+# 실행
 
 > go run main.go
 
@@ -25,7 +27,7 @@ func main() {
 }
 ```
 
-### 상수와 변수
+# 상수와 변수
 
 #### 상수
 ```go
@@ -49,5 +51,50 @@ func 안에서 사용 가능
 func main() {
     // 변수명 := 값
 	name := "bear"
+}
+```
+
+# function
+
+func 함수명(매개변수명 타입[,...]) 반환타입 {} 
+```go
+func multiply(a int, b int) int {
+    return a * b
+}
+```
+
+매개변수 타입이 같다면 마지막에 하나만 써도 된다.
+```go
+func multiply(a, b int) int {
+    return a * b
+}
+```
+
+여러 개의 매개변수를 받고 싶다면, ... 를 사용한다.
+```go
+func repeatMe(words ...string) {
+    fmt.Println(words)
+}
+
+func main() {
+    repeatMe("a", "b", "c", "d", "e")
+}
+```
+
+go문법에 특이한 점 중 하나는 여러 개의 return을 반환할 수 있다.
+```go
+func lenAndUpper(name string) (int, string) {
+	return len(name), strings.ToUpper(name)
+}
+
+func main() {
+    totalLength, upperName := lenAndUpper("treasure")
+}
+```
+
+여러 개의 반환 값이 있지만, 그 중 일부를 무시하고 싶다면 _ 를 사용한다. 
+```go
+func main() {
+    totalLength2, _ := lenAndUpper("treasure")
 }
 ```
