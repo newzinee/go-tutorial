@@ -7,6 +7,19 @@ import (
 	"github.com/treasureBear94/learngo/something"
 )
 
+func lenAndUpper3(name string) (length int, uppercase string) {
+	defer fmt.Println("I'm done")
+	length = len(name)
+	uppercase = strings.ToUpper(name)
+	return
+}
+
+func lenAndUpper2(name string) (length int, uppercase string) {
+	length = len(name)
+	uppercase = strings.ToUpper(name)
+	return
+}
+
 func lenAndUpper(name string) (int, string) {
 	return len(name), strings.ToUpper(name)
 }
@@ -21,6 +34,13 @@ func repeatMe(words ...string) {
 }
 
 func main() {
+
+	length3, up3 := lenAndUpper3("treasure")
+	fmt.Println("lenAndUpper3: ", length3, up3)
+
+	length, up := lenAndUpper2("treasure")
+	fmt.Println("lenAndUpper2: ", length, up)
+
 	repeatMe("a", "b", "c", "d", "e")
 
 	totalLength, upperName := lenAndUpper("treasure")
