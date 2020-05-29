@@ -123,3 +123,28 @@ func lenAndUpper3(name string) (length int, uppercase string) {
 	return
 }
 ```
+
+# for
+반복문 사용을 위해서는 for를 쓴다. 
+```go
+for i := 0; i < len(numbers); i++ {
+    fmt.Println(numbers[i])
+}
+```
+
+## range
+array 같은 배열을 반복할떄는 range를 쓴다. 
+
+반환은 순서대로 index, vaule
+```go
+for index, number := range numbers {
+    fmt.Println(index, number)
+}
+```
+
+여기서도, 쓰지 않을 변수라면 _를 사용한다. 
+```go
+for _, number := range numbers {
+    fmt.Println(number)
+}
+```

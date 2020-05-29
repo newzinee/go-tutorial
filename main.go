@@ -2,62 +2,38 @@ package main
 
 import (
 	"fmt"
-	"strings"
-
-	"github.com/treasureBear94/learngo/something"
 )
 
-func lenAndUpper3(name string) (length int, uppercase string) {
-	defer fmt.Println("I'm done")
-	length = len(name)
-	uppercase = strings.ToUpper(name)
-	return
+func supperAdd2(numbers ...int) int {
+	for i := 0; i < len(numbers); i++ {
+		fmt.Println(numbers[i])
+	}
+	return 1
 }
 
-func lenAndUpper2(name string) (length int, uppercase string) {
-	length = len(name)
-	uppercase = strings.ToUpper(name)
-	return
+func supperAdd0(numbers ...int) int {
+	for index, number := range numbers {
+		fmt.Println(index, number)
+	}
+
+	return 1
 }
 
-func lenAndUpper(name string) (int, string) {
-	return len(name), strings.ToUpper(name)
-}
+func supperAdd(numbers ...int) int {
 
-// func multiply(a int, b int) int {
-func multiply(a, b int) int {
-	return a * b
-}
+	total := 0
+	for _, number := range numbers {
+		total += number
+	}
 
-func repeatMe(words ...string) {
-	fmt.Println(words)
+	return total
 }
 
 func main() {
-
-	length3, up3 := lenAndUpper3("treasure")
-	fmt.Println("lenAndUpper3: ", length3, up3)
-
-	length, up := lenAndUpper2("treasure")
-	fmt.Println("lenAndUpper2: ", length, up)
-
-	repeatMe("a", "b", "c", "d", "e")
-
-	totalLength, upperName := lenAndUpper("treasure")
-	fmt.Println(totalLength, upperName)
-
-	totalLength2, _ := lenAndUpper("treasure")
-	fmt.Println(totalLength2)
-
-	fmt.Println(multiply(2, 2))
-
-	fmt.Println("Hello world!")
-	something.SayHello()
-
-	const name string = "bear"
-	var name2 string = "bear"
-	name3 := "bear"
-	fmt.Println(name)
-	fmt.Println(name2)
-	fmt.Println(name3)
+	supperAdd2(1, 2, 3, 4, 5, 6)
+	fmt.Println("----------")
+	supperAdd0(1, 2, 3, 4, 5, 6)
+	fmt.Println("----------")
+	result := supperAdd(1, 2, 3, 4, 5, 6)
+	fmt.Println(result)
 }
