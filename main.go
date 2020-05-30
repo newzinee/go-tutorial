@@ -4,36 +4,21 @@ import (
 	"fmt"
 )
 
-func supperAdd2(numbers ...int) int {
-	for i := 0; i < len(numbers); i++ {
-		fmt.Println(numbers[i])
+func canIDrink(age int) bool {
+	if age < 18 {
+		return false
 	}
-	return 1
+	return true
 }
 
-func supperAdd0(numbers ...int) int {
-	for index, number := range numbers {
-		fmt.Println(index, number)
+func canIDrink2(age int) bool {
+	if koreanAge := age + 2; koreanAge < 18 {
+		return false
 	}
-
-	return 1
-}
-
-func supperAdd(numbers ...int) int {
-
-	total := 0
-	for _, number := range numbers {
-		total += number
-	}
-
-	return total
+	return true
 }
 
 func main() {
-	supperAdd2(1, 2, 3, 4, 5, 6)
-	fmt.Println("----------")
-	supperAdd0(1, 2, 3, 4, 5, 6)
-	fmt.Println("----------")
-	result := supperAdd(1, 2, 3, 4, 5, 6)
-	fmt.Println(result)
+	fmt.Println(canIDrink(16))
+	fmt.Println(canIDrink2(16))
 }

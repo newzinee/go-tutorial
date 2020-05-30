@@ -148,3 +148,24 @@ for _, number := range numbers {
     fmt.Println(number)
 }
 ```
+
+# if
+조건문을 사용하기 위해서 if-else를 사용한다.
+```go
+func canIDrink(age int) bool {
+	if age < 18 {
+		return false
+	}
+	return true
+}
+```
+
+조건문 내에서만 사용할 변수를 만들 수 있다. 
+```go
+func canIDrink2(age int) bool {
+	if koreanAge := age + 2; koreanAge < 18 {
+		return false
+	}
+	return true
+}
+```
