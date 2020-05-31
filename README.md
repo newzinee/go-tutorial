@@ -169,3 +169,45 @@ func canIDrink2(age int) bool {
 	return true
 }
 ```
+
+# switch
+switch를 이용해서도 조건문을 만들 수 있다. 
+
+switch 변수 { case 값: }
+```go
+func canIDrink(age int) bool {
+	switch age {
+	case 10:
+		return false
+	case 18:
+		return true
+	}
+	return false
+}
+```
+
+case 문 안에 조건을 넣을 수도 있다. 
+```go
+func canIDrink2(age int) bool {
+	switch {
+	case age > 18:
+		return true
+	case age == 18:
+		return true
+	}
+	return false
+}
+```
+
+switch 안에서 사용할 변수도 생성해줄 수 있다. 
+```go
+func canIDrink3(age int) bool {
+	switch koreanAge := age + 2; koreanAge {
+	case 10:
+		return false
+	case 18:
+		return true
+	}
+	return false
+}
+```
