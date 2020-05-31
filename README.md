@@ -245,3 +245,28 @@ func main() {
 *b 를 통해 b의 저장된 주소의 값, 즉 a의 값을 변경할 수 있음.
 
 - *b = 20 -> b의 저장된 주소의 값을 20으로 수정 -> b의 저장된 주소=a의 주소, b의 저장된 주소의 값=a에 저장된 값 -> a가 20으로 수정됨
+
+# Arrays and Slices
+
+## Arrays
+길이가 정해진 배열
+
+[길이]Type{내용}
+```go
+func main() {
+	names := [5]string{"a", "b", "c"}
+    names[3] = "d"
+    empty := [5]string{}
+}
+```
+
+## Slices
+길이가 정해지지 않은 배열 
+
+data 추가 시, append 사용. 기존 Slices 가 수정되지 않고 새로운 Slices 가 반환됨.
+```go
+func main() {
+    names2 := []string{"a", "b", "c"}
+	names2 = append(names2, "d")
+}
+```

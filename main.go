@@ -3,11 +3,16 @@ package main
 import "fmt"
 
 func main() {
-	a := 2
-	b := &a
-	a = 5
-	fmt.Println(&a, b)
-	fmt.Println(*b)
-	*b = 20
-	fmt.Print(a)
+	names := [5]string{"a", "b", "c"}
+	names[3] = "d"
+	fmt.Println(names)
+
+	empty := [5]string{}
+	empty[0] = "1"
+	fmt.Println(empty)
+
+	names2 := []string{"a", "b", "c"}
+	names2 = append(names2, "d")
+
+	fmt.Println(names2)
 }
