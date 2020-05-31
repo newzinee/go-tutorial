@@ -211,3 +211,37 @@ func canIDrink3(age int) bool {
 	return false
 }
 ```
+
+# pointer
+
+## &
+주소값을 알기 위해서는 & 사용
+```go
+func main() {
+	a := 2
+    b := &a
+    fmt.Println(b)
+}
+```
+b에는 a의 주소값이 담기고, 출력하면 a의 주소가 출력됨.
+
+## *
+해당 주소값의 값을 접근하기 위해서는 * 사용 
+```go
+func main() {
+	a := 2
+	b := &a
+	a = 5
+	fmt.Println(&a, b)
+	fmt.Println(*b)
+	*b = 20
+	fmt.Print(a)
+}
+```
+*b 를 통해 b의 저장된 주소의 값, 즉 a의 값을 볼 수 있음.
+
+- fmt.Println(*b) -> 출력: 5
+
+*b 를 통해 b의 저장된 주소의 값, 즉 a의 값을 변경할 수 있음.
+
+- *b = 20 -> b의 저장된 주소의 값을 20으로 수정 -> b의 저장된 주소=a의 주소, b의 저장된 주소의 값=a에 저장된 값 -> a가 20으로 수정됨
