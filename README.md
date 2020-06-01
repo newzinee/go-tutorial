@@ -270,3 +270,18 @@ func main() {
 	names2 = append(names2, "d")
 }
 ```
+
+# map
+map을 통해 key, value 를 저장할 수 있다. 
+
+map[key타입]value타입{}
+```go
+func main() {
+    trea := map[string]string{"name": "trea", "age": "20"}
+	fmt.Println(trea)
+
+	for key, value := range trea {
+		fmt.Println(key, value)
+	}
+}
+```
