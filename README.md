@@ -285,3 +285,33 @@ func main() {
 	}
 }
 ```
+
+# struct
+type 구조체명 struct {
+
+변수명 타입
+
+}
+
+```go
+type person struct {
+	name    string
+	age     int
+	favFood []string
+}
+
+func main() {
+	favFood := []string{"kimchi", "apple"}
+	trea := person{"trea", 18, favFood}
+	fmt.Println(trea.name)
+}
+```
+
+그냥 순서대로 써도 되지만, 변수명을 앞에 표기할 수 있음. 변수명을 표기하면 전부 표기해야함.
+```go
+func main() {
+	favFood := []string{"kimchi", "apple"}
+	trea2 := person{name: "trea", age: 18, favFood: favFood}
+	fmt.Println(trea2.name)
+}
+```
