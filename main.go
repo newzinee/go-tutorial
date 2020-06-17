@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/treasureBear94/learngo/accounts"
+	"github.com/treasureBear94/learngo/mydict"
 )
 
 func main() {
@@ -17,4 +18,13 @@ func main() {
 	}
 	fmt.Println(account.Balance(), account.Owner())
 	fmt.Println(account)
+
+	dictionary := mydict.Dictionary{"first": "First word"}
+	definition, err := dictionary.Search("first")
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(definition)
+	}
+
 }
