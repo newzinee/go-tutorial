@@ -27,4 +27,16 @@ func main() {
 		fmt.Println(definition)
 	}
 
+	word := "hello"
+	defi := "Greeting"
+	err2 := dictionary.Add(word, defi)
+	if err2 != nil {
+		fmt.Println(err2)
+	}
+	hello, _ := dictionary.Search(word)
+	fmt.Println(hello)
+	err3 := dictionary.Add(word, defi)
+	if err3 != nil {
+		fmt.Println(err3)
+	}
 }
